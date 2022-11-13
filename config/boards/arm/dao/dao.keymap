@@ -60,13 +60,13 @@
 // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
 // |   SHFT       |    Z    |    X   |   C    |    V    |    B    |       |   N   |    M    |    ,    |    .    |     /    | ` | ALT  |
 // '---------------------------------+--------+---------+---------+       |------------+---------+---------+-------------------------------'
-//                                   |  GUI   |   NUMB  |NAVI|ENT |       |  SPC  |   BKSP  |  CAPS   |
+//                                   |  GUI   |   NUMB  |NAVI|ENT |       |  BKSP |   SPC  |  CAPS   |
 //                                   '--------+---------+---------'       '------------+---------+---------'
             bindings = <
 &none &kp ESC        &kp Q &kp W  &kp E     &kp R  &kp T         &kp Y           &kp U          &kp I        &kp O     &kp P      &kp LBKT &none
       &mt LCTRL TAB  &kp A &kp S  &kp D     &kp F  &kp G         &kp H           &kp J          &kp K        &kp L     &kp SEMI   &kp SQT
       &kp LSHFT      &kp Z &kp X  &kp C     &kp V  &kp B         &kp N           &kp M          &kp COMMA    &kp DOT   &kp FSLH   &mt RALT GRAVE
-                                  &kp LGUI  &mo 1  &lt NAVI RET  &kp SPACE  &kp BSPC  &kp CAPSLOCK
+                                  &kp LGUI  &mo 1  &lt NAVI RET  &kp BSPC  &kp SPACE  &kp CAPSLOCK
             >;
         };
         
@@ -78,7 +78,7 @@
 // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
 // |   SHFT       |         |    +   |   -    |    {    |    [    |       |   ]   |    }    |    =    |    _    |    ?     |          |
 // '---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------'
-//                                   |  GUI   |         |   MO3   |       |   SPC |   BKSP  |         |
+//                                   |  GUI   |         |   MO3   |       |   BKSP |   SPC  |         |
 //                                   '--------+---------+---------'       '-------+---------+---------'
             bindings = <
 &none &kp ESC    &kp N1    &kp N2       &kp N3        &kp N4            &kp N5            &kp N6             &kp N7           &kp N8           &kp N9          &kp N0    &kp GRAVE &none
@@ -100,10 +100,10 @@
 //                                   '--------+----------+----------'       '---------+----------+---------'
 
             bindings = <
-&none &none         &trans  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN       &kp HOME             &kp CARET           &kp PAGE_UP          &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME  &kp LG(LS(N4)) &none
-      &kp LA(X)     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp END              &kp MINUS           &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END   &trans
-      &none  &trans  &trans          &trans          &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans          &trans           &trans    &none
-                                            &kp LGUI        &mo ADJUST          &trans               &trans              &trans               &trans
+&none &none         &none  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN       &kp HOME             &kp CARET           &kp PAGE_UP          &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME  &kp LG(LS(N4)) &none
+      &kp LA(X)     &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp END              &kp MINUS           &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END   &none
+      &out OUT_TOG  &none  &none           &none          &kp LC(LEFT_ARROW)   &kp LC(RIGHT_ARROW)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &none           &none            &none    &out OUT_TOG
+                                            &kp LGUI        &mo ADJUST          &trans              &none               &none                &none
             >;
         };
 
@@ -119,10 +119,10 @@
 //                             '--------+---------+---------'       '--------+--------+---------'
 
             bindings = <
-&none &reset       &none         &none         &none         &none         &none         &kp C_VOLUME_UP    &trans  &trans  &trans  &trans  &reset &none
-      &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans  &trans
-      &bootloader  &none         &none         &none         &none         &none         &trans             &trans  &trans  &trans  &trans  &bootloader
-                                               &trans        &trans        &trans        &trans             &trans  &trans
+&none &reset       &none         &none         &none         &none         &none         &kp C_VOLUME_UP    &none  &none  &none  &none  &reset &none
+      &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp C_VOLUME_DOWN  &none  &none  &none  &none  &none
+      &bootloader  &none         &none         &none         &none         &none         &none              &none  &none  &none  &none  &bootloader
+                                               &trans        &trans        &trans        &trans             &none  &none
             >;
         };
     };

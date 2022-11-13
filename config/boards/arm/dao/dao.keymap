@@ -102,7 +102,7 @@
             bindings = <
 &none &none         &trans  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN       &kp HOME             &kp CARET           &kp PAGE_UP          &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME  &kp LG(LS(N4)) &none
       &kp LA(X)     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp END              &kp MINUS           &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END   &trans
-      &out OUT_TOG  &trans  &trans          &trans          &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans          &trans           &trans    &out OUT_TOG
+      &kp OUT_TOG  &trans  &trans          &trans          &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans          &trans           &trans    &kp OUT_TOG
                                             &kp LGUI        &mo ADJUST          &trans               &trans              &trans               &trans
             >;
         };

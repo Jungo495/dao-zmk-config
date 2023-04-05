@@ -82,7 +82,7 @@
 //                                   '--------+---------+---------'       '-------+---------+---------'
             bindings = <
 &none &trans     &kp EXCL   &kp AT     &kp HASH   &kp DLLR       &kp PRCNT         &kp CARET          &kp AMPS         &kp STAR         &kp LPAR        &kp RPAR   &kp EQUAL &none
-      &trans     &kp APOS   &kp DQT    &kp MINUS  &kp SEMI       &kp PIPE          &kp COLON          &kp QMARK        &kp LT           &kp NUBS        &kp UNDER  &kp PLUS
+      &trans     &kp APOS   &kp DQT    &kp MINUS  &kp SEMI       &kp PIPE          &kp COLON          &kp QMARK        &kp LT           &kp BSLH        &kp UNDER  &kp PLUS
       &trans     &kp GRAVE  &kp TILDE  &none      &kp LBRC       &kp LBKT          &kp RBKT           &kp RBRC         &kp COMMA        &kp DOT         &kp FSLH   &kp GT
                                        &none      &trans         &mo ADJUST        &trans             &trans           &trans
             >;

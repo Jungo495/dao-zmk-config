@@ -92,7 +92,7 @@
 // .---------------------------------------------------------------.       .------------------------------------------------------------------.
 // |     INS      |   DEL  |   PgUP  |    UP  |   PgDn  |   HOME   |       |         |    7     |    8    |    9     |          |    =        |
 // |--------------+--------+---------+--------+---------+----------|       |---------+----------+---------+----------+----------+-------------|
-// |     TAB      |        |   LEFT  |   DOWN |   RIGHT |   END    |       |         |    4     |    5    |    6     |          |             |
+// |     SHFT/Tab |        |   LEFT  |   DOWN |   RIGHT |   END    |       |         |    4     |    5    |    6     |          |             |
 // |--------------+--------+---------+--------+---------+----------|       |---------+----------+---------+----------+----------+-------------|
 // |     OUT_TOG  |        |         |        |CTRL+LEFT|CTRL+RIGHT|       |    0    |    1     |    2    |    3     |          |   OUT_TOG   |
 // '---------------------------------+--------+---------+----------+       |---------+----------+---------+-----------------------------------'
@@ -101,7 +101,7 @@
 
             bindings = <
 &none &kp INS       &kp DEL &kp PAGE_UP     &kp UP_ARROW       &kp PAGE_DOWN          &kp HOME           &none  &kp N7  &kp N8 &kp N9  &none  &kp EQUAL    &none
-      &kp TAB       &none   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW        &kp END            &none  &kp N4  &kp N5 &kp N6  &none  &none
+      &trans        &none   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW        &kp END            &none  &kp N4  &kp N5 &kp N6  &none  &none
       &out OUT_TOG  &none   &none           &none              &kp LC(LEFT_ARROW) &kp LC(RIGHT_ARROW)    &kp N0 &kp N1  &kp N2 &kp N3  &none  &out OUT_TOG
                                             &none  &mo ADJUST  &trans                                    &trans  &trans        &trans
             >;
@@ -111,7 +111,7 @@
 // .--------------------------------------------------------.       .--------------------------------------------------------------.
 // |  RESET  |        |        |        |         |  BTCL   |       |   VOL+ |        |         |         |          |  RESET      |
 // |---------+--------+--------+--------+---------+---------|       |--------+--------+---------+---------+----------+-------------|
-// |         |        |        |        |         |         |       |   VOL- |        |         |         |          |             |
+// |  OUT_TOG|        |        |        |         |         |       |   VOL- |        |         |         |          |  OUT_TOG    |
 // |---------+--------+--------+--------+---------+---------|       |--------+--------+---------+---------+----------+-------------|
 // |  BOOT   |        |        |        |         |         |       |   BT0  |   BT1  |   BT2   |   BT3   |          |  BOOT       |
 // '---------------------------+--------+---------+---------+       |--------+--------+---------+----------------------------------'
@@ -120,7 +120,7 @@
 
             bindings = <
 &none &reset       &none  &none  &none  &none  &bt BT_CLR         &kp C_VOLUME_UP    &none         &none         &none         &none  &reset      &none
-      &none        &none  &none  &none  &none  &none              &kp C_VOLUME_DOWN  &none         &none         &none         &none  &none
+      &out OUT_TOG &none  &none  &none  &none  &none              &kp C_VOLUME_DOWN  &none         &none         &none         &none  &out OUT_TOG
       &bootloader  &none  &none  &none  &none  &none              &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bootloader
                                  &none  &trans &trans             &none              &none  &none
             >;

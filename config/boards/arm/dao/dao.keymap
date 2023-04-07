@@ -31,6 +31,7 @@ ZMK_UNICODE_SINGLE(s_lbrc, KP_N0, KP_N1, KP_N2, KP_N3)      // {
 ZMK_UNICODE_SINGLE(s_rbrc, KP_N0, KP_N1, KP_N2, KP_N5)      // }
 ZMK_UNICODE_SINGLE(s_lt, KP_N0, KP_N0, KP_N6, KP_N0)        // <
 ZMK_UNICODE_SINGLE(s_rt, KP_N0, KP_N0, KP_N6, KP_N3)        // >
+ZMK_UNICODE_SINGLE(s_dot, KP_N0, KP_N0, KP_N4, KP_N6)       // .
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
@@ -140,7 +141,7 @@ ZMK_UNICODE_SINGLE(s_rt, KP_N0, KP_N0, KP_N6, KP_N3)        // >
             bindings = <
 &none &sys_reset   &none  &none  &none  &none  &bt BT_CLR         &kp C_VOLUME_UP    &none         &none         &none         &none  &sys_reset   &none
       &out OUT_TOG &none  &none  &none  &none  &none              &kp C_VOLUME_DOWN  &none         &none         &none         &none  &out OUT_TOG
-      &bootloader  &none  &none  &none  &none  &euro_sign         &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bootloader
+      &bootloader  &none  &none  &none  &none  &s_dot             &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bootloader
                                  &none  &trans &trans             &none              &none  &none
             >;
         };

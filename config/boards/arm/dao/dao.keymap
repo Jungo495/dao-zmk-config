@@ -17,8 +17,8 @@
 #define ADJUST 3
 
 
-&lt { quick_tap_ms = <200>; };
-&mt { quick_tap_ms = <200>; };
+&lt { quick_tap_ms = <100>; };
+&mt { quick_tap_ms = <100>; };
 
 / {
     behaviors {
@@ -57,17 +57,17 @@
 
         default_layer {
 // .--------------------------------------------------------------.       .-----------------------------------------------------------.
-// |   ESC        |  Q Й    |  W Ц   |  E У   |  R К    |  T Е    |       |  Y Н  |  U Г    |  I Ш    |  O Щ    |  P З     |    Х     |
-// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
-// |   SHFT/Tab   |  A Ф    |  S Ы   |  D В   |  F А    |  G П    |       |  H Р  |  J О    |  K Л    |  L Д    |    Ж     |    Э     |
-// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
-// |   CTRL       |  Z Я    |  X Ч   |  C С   |  V М    |  B И    |       |  N Т  |  M Ь    |    Б    |    Ю    |    Ъ     |   Ё|ALT  |
-// '---------------------------------+--------+---------+---------+       |-------+---------+---------+---------+----------+----------'
-//                                   |  EN/RU |  SIGNS  |NAVI|DEL |       |  SPC  |   ENT   |  BSPC   |
-//                                   '--------+---------+---------'       '-------+---------+---------'
+// |   ESC        |  Q Й    |  W Ц   |  E У   |  R К    |  T Е    |       |  Y Н   |  U Г    |  I Ш    |  O Щ    |  P З     |    Х     |
+// |--------------+---------+--------+--------+---------+---------|       |--------+---------+---------+---------+----------+----------|
+// |   Tab/SHFT   |  A Ф    |  S Ы   |  D В   |  F А    |  G П    |       |  H Р   |  J О    |  K Л    |  L Д    |    Ж     |   Э/RSHFT|
+// |--------------+---------+--------+--------+---------+---------|       |--------+---------+---------+---------+----------+----------|
+// |   CTRL       |  Z Я    |  X Ч   |  C С   |  V М    |  B И    |       |  N Т   |  M Ь    |    Б    |    Ю    |    Ъ     |   Ё|ALT  |
+// '---------------------------------+--------+---------+---------+       |--------+---------+---------+---------+----------+----------'
+//                                   | DEL/GUI|ENT/SIGNS|SPC/NAVI |       |SPC/NAVI|ENT/SIGNS|  BSPC   |
+//                                   '--------+---------+---------'       '--------+---------+---------'
             bindings = <
 &none &kp ESC       &kp Q &kp W  &kp E     &kp R     &kp T                  &kp Y           &kp U          &kp I        &kp O     &kp P      &kp LBKT &none
-      &mt LSHFT TAB &kp A &kp S  &kp D     &kp F     &kp G                  &kp H           &kp J          &kp K        &kp L     &kp SEMI   &kp SQT
+      &mt LSHFT TAB &kp A &kp S  &kp D     &kp F     &kp G                  &kp H           &kp J          &kp K        &kp L     &kp SEMI   &mt RSHFT SQT
       &kp LCTRL     &kp Z &kp X  &kp C     &kp V     &kp B                  &kp N           &kp M          &kp COMMA    &kp DOT   &kp FSLH   &mt RALT GRAVE
                                  &mt LGUI DEL &lt SIGNS RET &lt NAVI SPACE  &lt NAVI SPACE  &lt SIGNS RET  &kp BSPC
             >;
@@ -75,19 +75,19 @@
         
         lower_layer {
 // .--------------------------------------------------------------.       .-----------------------------------------------------------.
-// |   ESC        |    !   |    @    |   #    |    $    |    %    |       |   ^   |    &    |    *    |    (    |    )     |     =    |
-// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
-// |   SHFT/Tab   |    '   |    "    |   -    |    ;    |    |    |       |   :   |    ?    |    <    |    \    |    _     |     +    |
-// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
-// |   CTRL       |    `   |    ~    |  EN/RU |    {    |    [    |       |   ]   |    }    |    ,    |    .    |    /     |     >    |
-// '---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------'
-//                                   |        |         |  ADJUST |       |  SPC  |   ENT   |  BSPC   |
-//                                   '--------+---------+---------'       '-------+---------+---------'
+// |   ESC        |    !   |    @    |   #    |    $    |    %    |       |   ^    |    &    |    *    |    (    |    )     |    -     |
+// |--------------+---------+--------+--------+---------+---------|       |--------+---------+---------+---------+----------+----------|
+// |   Tab/SHFT   |    ~   |         |        |         |         |       |        |         |         |         |          | =/RSHFT  |
+// |--------------+---------+--------+--------+---------+---------|       |--------+---------+---------+---------+----------+----------|
+// |   CTRL       |        |         |  EN/RU |         |    [    |       |   ]    |         |         |         |    \     |   ALT    |
+// '---------------------------------+--------+---------+---------+       |--------+---------+---------+-------------------------------'
+//                                   | DEL/GUI|ENT/SIGNS|SPC/NAVI |       |SPC/NAVI|ENT/SIGNS|  BSPC   |
+//                                   '--------+---------+---------'       '--------+---------+---------'
             bindings = <
-&none &trans     &kp EXCL   &kp AT     &kp HASH   &kp DLLR       &kp PRCNT         &kp CARET          &kp AMPS         &kp STAR         &kp LPAR        &kp RPAR   &kp EQUAL &none
-      &trans     &kp APOS   &kp DQT    &kp MINUS  &kp SEMI       &kp PIPE          &kp COLON          &kp QMARK        &kp LT           &kp BSLH        &kp UNDER  &kp PLUS
-      &trans     &kp GRAVE  &kp TILDE  &kp LA(X)  &kp LBRC       &kp LBKT          &kp RBKT           &kp RBRC         &kp COMMA        &kp DOT         &kp FSLH   &kp GT
-                                       &none      &trans         &mo ADJUST        &trans             &trans           &trans
+&none &trans     &kp EXCL   &kp AT     &kp HASH   &kp DLLR       &kp PRCNT         &kp CARET          &kp AMPS         &kp STAR         &kp LPAR        &kp RPAR   &kp MINUS &none
+      &trans     &kp GRAVE  &none      &none      &none          &none             &none              &none            &none            &none           &none      &mt RSHFT EQUAL
+      &trans     &none      &none      &kp LA(X)  &none          &kp LBKT          &kp RBKT           &kp RBRC         &none            &none           &kp BSLH   &kp RALT
+                                       &trans     &trans         &lt ADJUST SPACE  &lt ADJUST SPACE   &trans           &trans
             >;
         };
         
@@ -95,37 +95,37 @@
 // .---------------------------------------------------------------.       .------------------------------------------------------------------.
 // |     INS      |   DEL  |   PgUP  |    UP  |   PgDn  |   HOME   |       |         |    7     |    8    |    9     |          |    =        |
 // |--------------+--------+---------+--------+---------+----------|       |---------+----------+---------+----------+----------+-------------|
-// |     SHFT/Tab |  PSCRN |   LEFT  |   DOWN |   RIGHT |   END    |       |         |    4     |    5    |    6     |          |             |
+// |     Tab/SHFT |  PSCRN |   LEFT  |   DOWN |   RIGHT |   END    |       |         |    4     |    5    |    6     |          |             |
 // |--------------+--------+---------+--------+---------+----------|       |---------+----------+---------+----------+----------+-------------|
-// |     Ctrl     |  LGUI  |         |        |CTRL+LEFT|CTRL+RIGHT|       |    0    |    1     |    2    |    3     |          |             |
+// |     Ctrl     |  LGUI  |         |        |CTRL+LEFT|CTRL+RIGHT|       |    0    |    1     |    2    |    3     |          |   ALT       |
 // '---------------------------------+--------+---------+----------+       |---------+----------+---------+-----------------------------------'
 //                                   |        |  ADJUST |          |       |  SPC    |  ENT     |  BSPC   |
 //                                   '--------+---------+----------'       '---------+----------+---------'
 
             bindings = <
 &none &kp INS       &kp DEL   &kp PAGE_UP     &kp UP_ARROW       &kp PAGE_DOWN          &kp HOME           &none  &kp N7  &kp N8 &kp N9  &none  &kp EQUAL    &none
-      &trans        &kp PSCRN &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW        &kp END            &none  &kp N4  &kp N5 &kp N6  &none  &none
-      &trans        &kp LGUI  &none           &none              &kp LC(LEFT_ARROW) &kp LC(RIGHT_ARROW)    &kp N0 &kp N1  &kp N2 &kp N3  &none  &none
-                                             &none  &mo ADJUST  &trans                                    &trans  &trans        &trans
+      &trans        &kp PSCRN &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW        &kp END            &none  &kp N4  &kp N5 &kp N6  &none  &kp RSHFT
+      &trans        &kp LGUI  &none           &none              &kp LC(LEFT_ARROW) &kp LC(RIGHT_ARROW)    &kp N0 &kp N1  &kp N2 &kp N3  &none  &kp RALT
+                                             &trans  &lt ADJUST RET  &trans                                    &trans  &lt ADJUST RET        &trans
             >;
         };
 
         adjust_layer {
 // .--------------------------------------------------------.       .--------------------------------------------------------------.
-// |  RESET  |        |        |        |         |  BTCL   |       |   VOL+ |        |         |         |          |  RESET      |
+// |  RESET  |  BT0   |  BT1   |   BT2  |         |  BTCL   |       |   VOL+ |   F7   |   F8    |   F9    |   F12    |  RESET      |
 // |---------+--------+--------+--------+---------+---------|       |--------+--------+---------+---------+----------+-------------|
-// |  OUT_TOG|        |   F4   |        |         |         |       |   VOL- | Alt+F4 |         |         |          |  OUT_TOG    |
+// |  BOOT   |        |        |        |         |         |       |   VOL- |   F4   |   F5    |   F6    |   F11    |  BOOT       |
 // |---------+--------+--------+--------+---------+---------|       |--------+--------+---------+---------+----------+-------------|
-// |  BOOT   |        |   F2   |        |         |         |       |   BT0  |   BT1  |   BT2   |   BT3   |          |  BOOT       |
+// |         |        |        |        |         |         |       |   MUTE |   F1   |   F2    |   F3    |   F10    |  ALT        |
 // '---------------------------+--------+---------+---------+       |--------+--------+---------+----------------------------------'
 //                             |        |         |         |       |        |        |         |
 //                             '--------+---------+---------'       '--------+--------+---------'
 
             bindings = <
-&none &sys_reset   &none  &none  &none  &none  &bt BT_CLR         &kp C_VOLUME_UP    &none         &none         &none         &none  &sys_reset   &none
-      &out OUT_TOG &none  &kp F4 &none  &none  &none              &kp C_VOLUME_DOWN  &kp LA(F4)    &none         &none         &none  &out OUT_TOG
-      &bootloader  &none  &kp F2 &none  &none  &none              &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bootloader
-                                 &none  &trans &trans             &none              &none  &none
+&none &sys_reset   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &bt BT_CLR         &kp C_VOLUME_UP    &kp F7  &kp F8  &kp F9  &kp F12  &sys_reset   &none
+      &bootloader  &none         &none        &none          &none  &none              &kp C_VOLUME_DOWN  &kp F4  &kp F5  &kp F6  &kp F11  &bootloader
+      &none        &none         &none        &none          &none  &none              &kp K_MUTE         &kp F1  &kp F2  &kp F3  &kp F10  &kp RALT
+                                              &trans         &trans &trans             &trans             &trans  &trans
             >;
         };
     };

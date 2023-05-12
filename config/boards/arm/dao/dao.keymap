@@ -77,7 +77,7 @@
 // .--------------------------------------------------------------.       .-----------------------------------------------------------.
 // |   ESC        |    !   |    @    |   #    |    $    |    %    |       |   ^    |    &    |    *    |    (    |    )     |    -     |
 // |--------------+---------+--------+--------+---------+---------|       |--------+---------+---------+---------+----------+----------|
-// |   Tab/SHFT   |    ~   |         |        |         |         |       |        |         |         |         |          | =/RSHFT  |
+// |   Tab/SHFT   |        |         |        |         |         |       |        |         |         |         |          | =/RSHFT  |
 // |--------------+---------+--------+--------+---------+---------|       |--------+---------+---------+---------+----------+----------|
 // |   CTRL       |        |         |  EN/RU |         |    [    |       |   ]    |         |         |         |    \     |   ALT    |
 // '---------------------------------+--------+---------+---------+       |--------+---------+---------+-------------------------------'
@@ -85,17 +85,17 @@
 //                                   '--------+---------+---------'       '--------+---------+---------'
             bindings = <
 &none &trans     &kp EXCL   &kp AT     &kp HASH   &kp DLLR       &kp PRCNT         &kp CARET          &kp AMPS         &kp STAR         &kp LPAR        &kp RPAR   &kp MINUS &none
-      &trans     &kp GRAVE  &none      &none      &none          &none             &none              &none            &none            &none           &none      &mt RSHFT EQUAL
-      &trans     &none      &none      &kp LA(X)  &none          &kp LBKT          &kp RBKT           &kp RBRC         &none            &none           &kp BSLH   &kp RALT
+      &trans     &none      &none      &none      &none          &none             &none              &none            &none            &none           &none      &mt RSHFT EQUAL
+      &trans     &none      &none      &kp LA(X)  &none          &kp LBKT          &kp RBKT           &none            &none            &none           &kp BSLH   &kp RALT
                                        &trans     &trans         &lt ADJUST SPACE  &lt ADJUST SPACE   &trans           &trans
             >;
         };
         
         raise_layer {
 // .---------------------------------------------------------------.       .------------------------------------------------------------------.
-// |     INS      |   DEL  |   PgUP  |    UP  |   PgDn  |   HOME   |       |         |    7     |    8    |    9     |          |    =        |
+// |     INS      |        |   PgUP  |    UP  |   PgDn  |   HOME   |       |         |    7     |    8    |    9     |          |    -        |
 // |--------------+--------+---------+--------+---------+----------|       |---------+----------+---------+----------+----------+-------------|
-// |     Tab/SHFT |  PSCRN |   LEFT  |   DOWN |   RIGHT |   END    |       |         |    4     |    5    |    6     |          |             |
+// |     Tab/SHFT |  PSCRN |   LEFT  |   DOWN |   RIGHT |   END    |       |         |    4     |    5    |    6     |          | =/RSHFT     |
 // |--------------+--------+---------+--------+---------+----------|       |---------+----------+---------+----------+----------+-------------|
 // |     Ctrl     |  LGUI  |         |        |CTRL+LEFT|CTRL+RIGHT|       |    0    |    1     |    2    |    3     |          |   ALT       |
 // '---------------------------------+--------+---------+----------+       |---------+----------+---------+-----------------------------------'
@@ -103,8 +103,8 @@
 //                                   '--------+---------+----------'       '---------+----------+---------'
 
             bindings = <
-&none &kp INS       &kp DEL   &kp PAGE_UP     &kp UP_ARROW       &kp PAGE_DOWN          &kp HOME           &none  &kp N7  &kp N8 &kp N9  &none  &kp EQUAL    &none
-      &trans        &kp PSCRN &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW        &kp END            &none  &kp N4  &kp N5 &kp N6  &none  &kp RSHFT
+&none &kp INS       &none     &kp PAGE_UP     &kp UP_ARROW       &kp PAGE_DOWN          &kp HOME           &none  &kp N7  &kp N8 &kp N9  &none  &kp MINUS    &none
+      &trans        &kp PSCRN &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW        &kp END            &none  &kp N4  &kp N5 &kp N6  &none  &mt RSHFT EQUAL
       &trans        &kp LGUI  &none           &none              &kp LC(LEFT_ARROW) &kp LC(RIGHT_ARROW)    &kp N0 &kp N1  &kp N2 &kp N3  &none  &kp RALT
                                              &trans  &lt ADJUST RET  &trans                                    &trans  &lt ADJUST RET        &trans
             >;

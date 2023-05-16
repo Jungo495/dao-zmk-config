@@ -79,14 +79,14 @@
 // |--------------+---------+--------+--------+---------+---------|       |--------+---------+---------+---------+----------+----------|
 // |   Tab/SHFT   |        |         |        |         |         |       |        |         |         |         |          | =/RSHFT  |
 // |--------------+---------+--------+--------+---------+---------|       |--------+---------+---------+---------+----------+----------|
-// |   CTRL       |        |         |  EN/RU |         |    [    |       |   ]    |         |         |         |    \     |   ALT    |
+// |   CTRL       |        |         |        |         |    [    |       |   ]    |         |         |         |    \     |   ALT    |
 // '---------------------------------+--------+---------+---------+       |--------+---------+---------+-------------------------------'
 //                                   | DEL/GUI|ENT/SIGNS|SPC/NAVI |       |SPC/NAVI|ENT/SIGNS|  BSPC   |
 //                                   '--------+---------+---------'       '--------+---------+---------'
             bindings = <
 &none &trans     &kp EXCL   &kp AT     &kp HASH   &kp DLLR       &kp PRCNT         &kp CARET          &kp AMPS         &kp STAR         &kp LPAR        &kp RPAR   &kp MINUS &none
       &trans     &none      &none      &none      &none          &none             &none              &none            &none            &none           &none      &mt RSHFT EQUAL
-      &trans     &none      &none      &kp LA(X)  &none          &kp LBKT          &kp RBKT           &none            &none            &none           &kp BSLH   &kp RALT
+      &trans     &none      &none      &none      &none          &kp LBKT          &kp RBKT           &none            &none            &none           &kp BSLH   &kp RALT
                                        &trans     &trans         &lt ADJUST SPACE  &lt ADJUST SPACE   &trans           &trans
             >;
         };

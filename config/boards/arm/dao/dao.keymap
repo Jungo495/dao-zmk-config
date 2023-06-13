@@ -49,9 +49,8 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
-    };
 
-    macros {
+
         ch_lt: ch_lt {
             label = "ch_lt";
             compatible = "zmk,behavior-macro";
@@ -64,6 +63,10 @@
                 <&macro_release &tog 1 &kp LSHFT>;
         };
     };
+
+
+
+    
 
 
 

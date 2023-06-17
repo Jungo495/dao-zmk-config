@@ -25,16 +25,27 @@
     behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
+            label = "layer_switch_with_escape";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings =
                 <&ch_lt>,
-                <&kp N2>,
-                <&kp N3>;
+                <&kp ESC>;
         };
     };
     macros {
+        ch_lt: ch_lt {
+            label = "ch_lt";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = 
+                <&macro_press &tog 1 &kp LSHIFT>,
+                <&macro_tap &kp LALT>,
+                <&macro_pause_for_release>,
+                <&macro_release &tog 1 &kp LSHIFT>;
+        };
         ch_lang: ch_lang {
             label = "ch_lang";
             compatible = "zmk,behavior-macro";
@@ -49,64 +60,43 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
-
-
-        ch_lt: ch_lt {
-            label = "ch_lt";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings = 
-                <&macro_press &tog 1 &kp LSHIFT>,
-                <&macro_tap &kp LALT>,
-                <&macro_pause_for_release>,
-                <&macro_release &tog 1 &kp LSHIFT>;
-        };
     };
-
-
-
-    
-
-
-
 };
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        colemak_layer {
+        en_layer {
 // .--------------------------------------------------------------.       .-----------------------------------------------------------.
-// |   ESC        |  Q Й    |  W Ц   |  E У   |  R К    |  T Е    |       |  Y Н   |  U Г    |  I Ш    |  O Щ    |  P З     |    Х     |
+// | 1ch_lt/2ESC  |  Q      |  W     |  E     |  R      |  T      |       |  Y     |  U      |  I      |  O      |   P      |    [     |
 // |--------------+---------+--------+--------+---------+---------|       |--------+---------+---------+---------+----------+----------|
-// |   Tab/SHFT   |  S Ф    |  A Ы   |  D В   |  F А    |  G П    |       |  H Р   |  J О    |  K Л    |  L Д    |    Ж     |   Э/RSHFT|
+// |   Tab/SHFT   |  A      |  S     |  D     |  F      |  G      |       |  H     |  J      |  K      |  L      |    ;     |   '/RSHFT|
 // |--------------+---------+--------+--------+---------+---------|       |--------+---------+---------+---------+----------+----------|
-// |   CTRL       |  Z Я    |  X Ч   |  C С   |  V М    |  B И    |       |  N Т   |  M Ь    |    Б    |    Ю    |    Ъ     |   Ё|ALT  |
+// |   CTRL       |  Z      |  X     |  C     |  V      |  B      |       |  N     |  M      |    ,    |    .    |    /     |   `|ALT  |
 // '---------------------------------+--------+---------+---------+       |--------+---------+---------+---------+----------+----------'
 //                                   | DEL/GUI|ENT/SIGNS|SPC/NAVI |       |SPC/NAVI|ENT/SIGNS|  BSPC   |
 //                                   '--------+---------+---------'       '--------+---------+---------'
             bindings = <
-&none &td0       &kp Q &kp W  &kp E     &kp R     &kp T                  &kp Y           &kp U          &kp I        &kp O     &kp P      &kp LBKT &none
+&none &td0          &kp Q &kp W  &kp E     &kp R     &kp T                  &kp Y           &kp U          &kp I        &kp O     &kp P      &kp LBKT &none
       &mt LSHFT TAB &kp S &kp A  &kp D     &kp F     &kp G                  &kp H           &kp J          &kp K        &kp L     &kp SEMI   &mt RSHFT SQT
       &kp LCTRL     &kp Z &kp X  &kp C     &kp V     &kp B                  &kp N           &kp M          &kp COMMA    &kp DOT   &kp FSLH   &mt RALT GRAVE
                                  &mt LGUI DEL &lt SIGNS RET &lt NAVI SPACE  &lt NAVI SPACE  &lt SIGNS RET  &kp BSPC
             >;
         };
 
-        qwerty_layer {
+        ru_layer {
 // .--------------------------------------------------------------.       .-----------------------------------------------------------.
-// |   ESC        |  Q Й    |  W Ц   |  E У   |  R К    |  T Е    |       |  Y Н   |  U Г    |  I Ш    |  O Щ    |  P З     |    Х     |
+// | 1ch_lt/2ESC  |  Й      |  Ц     |  У     |  К      |  Е      |       |  Н     |  Г      |  Ш      |  Щ      |  З       |    Х     |
 // |--------------+---------+--------+--------+---------+---------|       |--------+---------+---------+---------+----------+----------|
-// |   Tab/SHFT   |  A Ф    |  S Ы   |  D В   |  F А    |  G П    |       |  H Р   |  J О    |  K Л    |  L Д    |    Ж     |   Э/RSHFT|
+// |   Tab/SHFT   |  Ф      |  Ы     |  В     |  А      |  П      |       |  Р     |  О      |  Л      |  Д      |  Ж       |   Э/RSHFT|
 // |--------------+---------+--------+--------+---------+---------|       |--------+---------+---------+---------+----------+----------|
-// |   CTRL       |  Z Я    |  X Ч   |  C С   |  V М    |  B И    |       |  N Т   |  M Ь    |    Б    |    Ю    |    Ъ     |   Ё|ALT  |
+// |   CTRL       |  Я      |  Ч     |  С     |  М      |  И      |       |  Т     |  Ь      |  Б      |  Ю      |  .       |   Ё|ALT  |
 // '---------------------------------+--------+---------+---------+       |--------+---------+---------+---------+----------+----------'
 //                                   | DEL/GUI|ENT/SIGNS|SPC/NAVI |       |SPC/NAVI|ENT/SIGNS|  BSPC   |
 //                                   '--------+---------+---------'       '--------+---------+---------'
             bindings = <
-&none &kp ESC       &kp Q &kp W  &kp E     &kp R     &kp T                  &kp Y           &kp U          &kp I        &kp O     &kp P      &kp LBKT &none
+&none &td0          &kp Q &kp W  &kp E     &kp R     &kp T                  &kp Y           &kp U          &kp I        &kp O     &kp P      &kp LBKT &none
       &mt LSHFT TAB &kp A &kp S  &kp D     &kp F     &kp G                  &kp H           &kp J          &kp K        &kp L     &kp SEMI   &mt RSHFT SQT
       &kp LCTRL     &kp Z &kp X  &kp C     &kp V     &kp B                  &kp N           &kp M          &kp COMMA    &kp DOT   &kp FSLH   &mt RALT GRAVE
                                  &mt LGUI DEL &lt SIGNS RET &lt NAVI SPACE  &lt NAVI SPACE  &lt SIGNS RET  &kp BSPC

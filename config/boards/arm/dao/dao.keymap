@@ -54,7 +54,7 @@
                 <&macro_pause_for_release>,
                 <&macro_release &tog 1 &kp LSHIFT>;
         };
-        ch_lg ch_lg {
+        ch_lg: ch_lg {
             label = "ch_lg";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;

@@ -62,11 +62,11 @@
             tap-ms = <20>;
             bindings =
                 <&macro_press>,
-                <&kp SHFT>,
+                <&kp LSHIFT>,
                 <&macro_tap>,
                 <&kp LALT>,
                 <&macro_release>,
-                <&kp SHFT>;
+                <&kp LSHIFT>;
         };
     };
 };

@@ -95,7 +95,7 @@
 
             bindings = <
 &kp ESC &kp Q  &kp W  &kp E         &kp R               &kp T               &kp Y           &kp U          &kp I       &kp O      &kp P     &kp LBKT
-&kp TAB &hm LGUI A  &hm LALT S  &hm LSHFT D &hm LCTRL F &kp G               &kp H           &hm RCTRL J    &hm RSHFT K &hm RALT L &kp SEMI  &kp  SQT
+&kp TAB &hm LGUI A  &hm LALT S  &lhm LSHFT D &hm LCTRL F &kp G               &kp H           &hm RCTRL J    &hm RSHFT K &hm RALT L &kp SEMI  &kp  SQT
 &none   &kp Z  &kp X  &kp C         &kp V               &kp B               &kp N           &kp M          &kp COMMA   &kp DOT    &kp FSLH  &kp  GRAVE
                       &kp DEL       &lt SIGNS RET       &lt NAVI SPACE      &lt NAVI SPACE  &lt SIGNS RET  &kp BSPC
             >;

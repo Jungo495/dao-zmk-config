@@ -27,6 +27,8 @@
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
 
             hold-trigger-on-release;
+
+            hold-trigger-key-positions 1;
         };
 
     };

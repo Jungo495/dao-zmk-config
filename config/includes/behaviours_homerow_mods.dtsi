@@ -28,7 +28,8 @@
 
             hold-trigger-on-release;
 
-            hold-trigger-key-positions 1;
+            /*hold-trigger-key-positions 1;
+            */
         };
 
     };
